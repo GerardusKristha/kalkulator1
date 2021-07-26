@@ -122,9 +122,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 display.setText(" ");
+                Log.d("angka1",Double.toString(angka_1));
+                Log.d("angka2",Double.toString(angka_2));
+                Log.d("hasil",Double.toString(hasil));
                 angka_1=0;
                 angka_2=0;
                 hasil =0;
+                sementara =0;
                 angka = "";
             }
         });
@@ -134,8 +138,8 @@ public class MainActivity extends AppCompatActivity {
                 angka_1 = Double.parseDouble(angka);
                 display.setText( "x" );
                 sementara_2 =  sementara_2* angka_1;
-                sementara_2= Double.toString(angka);
-                Log.d(sementara_2,);
+                String cek = Double.toString(sementara_2);
+                Log.d("hasilsementara_2",cek);
                 angka="";
                 operasi = 3;
             }
@@ -146,7 +150,8 @@ public class MainActivity extends AppCompatActivity {
                 angka_1 = Double.parseDouble(angka);
                 display.setText( ":" );
                 sementara_2 = angka_1/sementara_2 ;
-                sementara_2= Double.toString(angka);
+                String cek = Double.toString(sementara_2);
+                Log.d("hasilsementara_2",cek);
                 angka="";
                 operasi = 4;
             }
@@ -186,7 +191,8 @@ public class MainActivity extends AppCompatActivity {
                 angka_1= Double.parseDouble(angka);
                 display.setText( "+" );
                 sementara = sementara + angka_1;
-                sementara_2= Double.toString(angka);
+                String cek = Double.toString(sementara_2);
+                Log.d("hasilsementara_2",cek);
                 angka="";
                 operasi = 1;
             }
@@ -196,6 +202,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 angka_1 = Double.parseDouble(angka);
                 display.setText( "-" );
+                System.out.println(sementara);
                 sementara = sementara - angka_1;
                 System.out.println(sementara);
                 angka="";
@@ -209,14 +216,14 @@ public class MainActivity extends AppCompatActivity {
                     case 1: //tambah
                         angka_2 = Double.parseDouble(angka);
                         hasil=sementara + angka_2;
-                        System.out.println(sementara);
+                        System.out.println(hasil);
                         angka = Double.toString(hasil);
                         display.setText(angka);
                         break;
                     case 2: //kurang
                         angka_2 = Double.parseDouble(angka);
                         hasil=sementara- angka_2;
-                        System.out.println(sementara);
+                        System.out.println(hasil);
                         angka = Double.toString(hasil);
                         display.setText(angka);
                         break;
