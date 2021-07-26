@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     double hasil,angka_1, angka_2,angka_3,sementara,sementara_2;
     int operasi;
     String angka;
+    String tes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
